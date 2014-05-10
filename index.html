@@ -4,11 +4,12 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<title>Minimalist Online Txt2tags Editor</title>
 		<meta name="description" content="This is the simplest and slickest online Txt2tags editor. Just write Txt2tags and see what it looks like as you type. And convert it to HTML in one click."/>
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-		<meta property="og:image" content="http://markdown.pioul.fr/images/markdown.png"/>
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+		<meta property="og:image" content="http://wiki.txt2tags.org/uploads/text-x-txt2tags-icon-alone.png"/>
 		<link rel="stylesheet" href="css/main.css" type="text/css">
 		<link rel="stylesheet" href="css/ionicons.css" type="text/css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+        <script src="js/jquery.min.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/showdown.js"></script>
 	</head>
@@ -20,20 +21,19 @@
 					<table>
 						<tr>
 							<td>
-								<pre><code><span class="highlight">*</span>This is italicized<span class="highlight">*</span>, and <span class="highlight">**</span>this is bold<span class="highlight">**</span>.</code></pre>
+								<pre><code><span class="highlight">//</span>This is italicized<span class="highlight">//</span>, and <span class="highlight">**</span>this is bold<span class="highlight">**</span>.</code></pre>
 							</td>
 							<td><p>Use <code>*</code> or <code>_</code> for emphasis.</p></td>
 						</tr>
 						<tr>
 							<td>
-								<pre><code>This is a first level header
-<span class="highlight">============================</span></code></pre>
+								<pre><code><span class="highlight">==</span> This is a second level header <span class="highlight">==</span></code></pre>
 							</td>
-							<td><p>You can alternatively put hash marks at the beginning of the line: <code>#&nbsp;H1</code>, <code>##&nbsp;H2</code>, <code>###&nbsp;H3</code>...</p></td>
+							<td><p>Level goes from 1 to 5</code>, <code>=== H3 ===</code>, <code>etc</code>...</p></td>
 						</tr>
 						<tr>
 							<td>
-								<pre><code>This is a link to <span class="highlight">[Google](http://www.google.com)</span></code></pre>
+								<pre><code>This is a link to <span class="highlight">[Txt2tags http://www.txt2tags.org]</span></code></pre>
 							</td>
 							<td><p></p></td>
 						</tr>
@@ -49,39 +49,35 @@ Second line.</code></pre>
 								<pre><code><span class="highlight">- </span>Unordered list item
 <span class="highlight">- </span>Unordered list item</code></pre>
 							</td>
-							<td><p>Unordered (bulleted) lists use asterisks, pluses, and hyphens (<code>*</code>, <code>+</code>, and <code>-</code>) as list markers.</p></td>
+							<td><p>Unordered (bulleted) lists use hyphens (<code>-</code>) as list markers.</p></td>
 						</tr>
 						<tr>
 							<td>
-								<pre><code><span class="highlight">1. </span>Ordered list item
-<span class="highlight">2. </span>Ordered list item</code></pre>
+								<pre><code><span class="highlight">+ </span>Ordered list item
+<span class="highlight">+ </span>Ordered list item</code></pre>
 							</td>
-							<td><p>Ordered (numbered) lists use regular numbers, followed by periods, as list markers.</p></td>
+							<td><p>Ordered (numbered) lists use plus symbol (<code>-</code>) as list markers.</p></td>
 						</tr>
 						<tr>
 							<td><pre><code><span class="highlight">    </span>/* This is a code block */</code></pre></td>
-							<td><p>Indent four spaces for a preformatted block.</p></td>
+							<td><p>Indent one tab for a preformatted block.</p></td>
 						</tr>
 						<tr>
-							<td><pre><code>Let's talk about <span class="highlight">`</span>&lt;html&gt;<span class="highlight">`</span>!</code></pre></td>
-							<td><p>Use backticks for inline code.</p></td>
+							<td><pre><code>Let's talk about <span class="highlight">``</span>&lt;html&gt;<span class="highlight">``</span>!</code></pre></td>
+							<td><p>Use 2 backticks for inline code.</p></td>
 						</tr>
 						<tr>
 							<td>
-								<pre><code><span class="highlight">![Valid XHTML](http://w3.org/Icons/valid-xhtml10)</span></code></pre>
+								<pre><code><span class="highlight">[http://w3.org/Icons/valid-xhtml10]</span></code></pre>
 							</td>
-							<td><p>Images are exactly like links, but they have an exclamation point in front of them.</p></td>
+							<td><p>Images are exactly like links</p></td>
 						</tr>
 					</table>
-					<p><a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">Full Txt2tags documentation</a></p>
+					<p><a href="http://www.txt2tags.org/markup.html" target="_blank">Full Txt2tags documentation</a></p>
 				</div>
 				<div class="top_panel" id="about">
 					<div class="close">×</div>
-					<p>Hi, I'm <a href="http://pioul.fr/a-propos/" target="_blank">Philippe Masset</a>.</p>
-					<p>I made this minimalist online Markdown editor just for the heck of it, and also because I love Markdown (and front-end stuff).<br/>
-					The whole source code is available on <a href="https://github.com/pioul/MinimalistOnlineMarkdownEditor" target="_blank">GitHub</a>.</p>
-					<p>If you have any suggestions or remarks whatsoever, just click on my name above and you'll have plenty of ways of contacting me.</p>
-					<p>Credit is due to <a href="http://daringfireball.net/" target="_blank">John Gruber</a> for creating <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> in the first place, and John Fraser for his amazing JavaScript port, <code>showdown.js</code>.</p>
+					<p>The whole source code is available on <a href="https://github.com/farvardin/MinimalistOnlineTxt2tagsEditor" target="_blank">GitHub</a>.</p>
 				</div>
 			</div>
 			<div class="wrapper">
@@ -303,7 +299,7 @@ That's all for now.
 ### Buttons you might want to use
 
 - **Quick Reference**: that's a reminder of the most basic rules of Markdown
-- **HTML | Preview**: *HTML* to see the markup generated from your Txt2tags text, *Preview* to see how it looks like
+- **HTML | Preview**: //HTML// to see the markup generated from your Txt2tags text, //Preview// to see how it looks like
 
 ### Privacy
 
